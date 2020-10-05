@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page 1 - Linda Yesso</title>
+        <meta charset="utf-8"/>
+        <style>
+            *{
+                margin:0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            .container{
+                width:1200px;
+                margin:0px auto;
+            }
+            .active{
+                display:inline-block;
+                background-color: orange;
+                text-align: center;
+                padding-left: 15px;
+            }
+            .shadow{
+                box-shadow: 1px 1px 1px black;
+            }
+            header .head{
+                height:150px;
+                background-color:  #fff;
+            }
+            .logo{
+                display: inline-block;
+            }
+            .connexion{
+                width:1045px;
+                display: inline-block;
+                vertical-align: top;
+                line-height: 150px;
+                text-align: right;
+            }
+            .bouton{
+                border:1px solid #eee;
+                padding:15px;
+                border-radius: 10px;
+                background-color: orangered;
+                color:white;
+                font-family: tahoma;
+                margin-left: 10px;
+            }
+            .connexion a{
+                text-decoration: none;
+                color:white;
+
+            }
+            header .menu{
+                height:70px;
+                background-color: #0f2538;
+                color:#fff;
+                line-height: 70px;
+            }
+            .menu a {
+                color:white;
+                text-decoration: none;
+                padding-right: 20px;
+            }
+            .menu form{
+                display: inline-block;
+                position:relative;
+            }
+            .menu form input{
+                border:none;
+                border-radius: 15px;
+                width:300px;
+                height:30px;
+                padding-left:10px;
+            }
+            .menu form button{
+                border:none;
+                border-radius: 50%;
+                width:30px;
+                height:30px;
+                background-color: orange;
+                color:white;
+                position: absolute;
+                right:0px;
+                top:20px;
+            }
+            main{
+                margin-top: 10px;
+            }
+            .left{
+                display:inline-block;
+                vertical-align: top;
+                width:250px;
+            }
+            .centre{
+                display:inline-block;
+                vertical-align: top;
+                width:690px;
+            }
+            .right{
+                display:inline-block;
+                vertical-align: top;
+                width:250px;
+            }
+            .right .compare{
+                height:200px;
+                background-color: #0f2538;
+                margin-bottom:20px;
+                padding-left: 10px;
+                color: white;
+            }
+            .compare h3{
+                padding-top: 10px;
+                margin-bottom:  30px;
+            }
+            .compare p{
+                margin-bottom: 30px;
+            }
+            .right .my-cart{
+                height:200px;
+                background-color: #0f2538;
+                margin-bottom:20px;
+                padding-left: 10px;
+                color: white;
+            }
+            .my-cart h3{
+                padding-top: 10px;
+                margin-bottom: 30px;
+            }
+            .my-cart p{
+                margin-bottom: 50px;
+            }
+            .right .youtube{
+                height:200px;
+                background-color: #0f2538;
+                margin-bottom:20px;
+            }
+            .right .poll{
+                height:200px;
+                background-color: #0f2538;
+                color:white;
+                padding-left: 10px;
+            }
+            .poll h3{
+                padding-top: 10px;
+            }
+            .poll p{
+                padding: 20px  0;
+            }
+            .poll label{
+                padding-top: 15px;
+            }
+            .promo, .palette, .tags{
+                height:300px;
+                margin-bottom:20px ;
+                position: relative;
+            }
+            .promo img{
+                width:100%;
+                height:300px;
+            }
+            .promo h1{
+                position:absolute;
+                top:5px;
+                left:5px;
+                color:red;
+            }
+            .palette{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .palette #brown{
+                background-color: brown;
+            }
+            .palette #purple{
+                background-color: purple;
+            }
+            .palette #blue{
+                background-color: blue;
+            }
+            .palette #green{
+                background-color: green;
+            }
+            .palette #pink{
+                background-color: pink;
+            }
+            .palette #black{
+                background-color: black;
+            }
+            .tags h3{
+                margin-bottom: 30px;
+            }
+            .tags .big{
+                font-size:25px;
+            }
+            .tags .medium{
+                font-size:20px;
+            }
+            .tags .small{
+                font-size:15px;
+            }
+            .tags a{
+                color: #555;
+                text-decoration: none;
+            }
+            .carousel-container{
+                width:690px;
+                overflow: hidden;
+                position: relative;
+                border: 1px solid #eee;
+            }
+            .carousel-slide{
+                display:flex;
+            }
+            #prevBtn{
+                position: absolute;
+                width:50px;
+                height: 400px;
+                top:0px;
+                left:0px;
+                background-color: rgba(255,255,255,0.5);
+                cursor: pointer;
+            }
+            #nextBtn{
+                position: absolute;
+                width:50px;
+                height: 400px;
+                top:0px;
+                right:0px;
+                background-color: rgba(255,255,255,0.5);
+                cursor: pointer;
+            }
+            #prevBtn img{
+                position: absolute;
+                top:50%;
+                width: 50px;
+                height: 50px;
+                transform: translateY(-50%);
+            }
+            #nextBtn img{
+                position: absolute;
+                top:50%;
+                width: 50px;
+                height: 50px;
+                transform: translateY(-50%);
+            }
+            .shipping-info{
+                height:100px;
+                margin-top: 30px;
+            }
+            .best-selling{
+
+            }
+            .produits{
+                display: grid; 
+                grid-template-columns: repeat(2, 1fr);
+                
+            }
+            .produit{
+                padding:10px;
+                display:flex;
+            }
+            .produit-nom{
+                padding-left: 10px;
+            }
+            .text-orange{
+                color: orange;
+            }
+            footer{
+                height:auto;
+                color:#fff;
+                margin-top:50px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                background-color: #0f2538;
+            }
+            footer .container{
+                display:flex;
+            }
+            footer .details{
+                flex:1;
+            }
+            footer h3{
+                margin-bottom: 30px;
+                color:orange;
+            }
+            footer ul{
+                list-style: none;
+            }
+            footer ul li{
+                padding:10px;
+            }
+            footer ul li a{
+                text-decoration:none;
+                color:white;
+            }
+            footer .input{
+                border: 1px solid #0f2538;
+                width:250px;
+                height: 30px;
+                padding:5px;
+            }
+            footer button{
+                border: 1px solid #0f2538;
+                width:250px;
+                height: 30px;
+                background-color: orange;
+                color:white;
+                margin-bottom:20px;
+            }
+            .copyright{
+                text-align: center;
+                background-color: #17202A;
+                color:#eee;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="head">
+                <div class="container">
+                    <div class="logo">
+                         <img src="images/logo_1.png" alt="">
+                    </div>
+                   
+                    <div class="connexion">
+                        <span class="bouton"><a href="#">Connexion</a> </span>
+                        <span class="bouton"><a href="#">Ma liste de souhaits</a></span>
+                        <span class="bouton"><a href="#">Mon Panier</a></span>
+                        <span class="bouton"><a href="#">Mon Compte</a> </span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="container">
+                    <a href="" class="active">Accueil</a>
+                    <a href="">Meubles</a>
+                    <a href="">Musiques</a>
+                    <a href="">Ebooks</a>
+                    <a href="">Electroniques</a>
+                    <a href="">Thèmes</a>
+                    <a href="">FAQ</a>
+                    <a href="">Contacts</a>
+                    <form action="">
+                        <input type="text" placeholder="Votre recherche ici">
+                        <button>Go</button>
+                    </form>
+                </div>
+            </div>    
+        </header>
+
+        <main> 
+            <div class="container">
+                <div class="left">
+                    <div class="promo">
+                        <h1 id="ad">Promo!</h1>
+                        <img src="images/chapeau-1.jpg" alt="">
+                    </div>
+                    <div class="palette">
+                        <div class="pal-color" id="brown" onClick="changeBackgroundColor('brown')"></div>
+                        <div class="pal-color" id="blue" onClick="changeBackgroundColor('blue')"></div>
+                        <div class="pal-color" id="purple" onClick="changeBackgroundColor('purple')"></div>
+                        <div class="pal-color" id="green" onClick="changeBackgroundColor('green')"></div>
+                        <div class="pal-color" id="pink" onClick="changeBackgroundColor('pink')"></div>
+                        <div class="pal-color" id="black" onClick="changeBackgroundColor('black')"></div>
+                    </div>
+                    <div class="tags">
+                        <h3 class="text-orange">Popular Tags</h3>
+                        <p>
+                            <span class="big"> <a href="#">Tabouret</a>   </span> <span class="small"><a href="#">Chaise</a> </span><span class="medium"><a href="#">Pagne</a> </span><span class="small"><a href="#">Montre</a> </span>
+                            <span class="medium"><a href="#">portefeuille</a> </span><span class="small"><a href="#">Chémise</a> </span><span class="big"><a href="#">Livre</a> </span>
+                            <span class="small"><a href="#">Chaussures</a> </span><span class="big"><a href="#">Chapeau</a> </span><span class="small"><a href="#">Montre</a> </span>
+                            <span class="small"><a href="#">portefeuille</a> </span><span class="small"><a href="#">Chémise </a></span><span class="medium"><a href="#">Livre </a></span>
+                            <span class="small"><a href="#">Chaussures </a></span><span class="small"><a href="#">Chapeau </a></span><span class="big"><a href="#">Montre</a> </span>
+
+
+                        </p>
+                    </div>
+                </div>
+                <div class="centre">
+                   
+                    <div class="carousel-container"> 
+                        <a href="page2.html" target="_blank">
+                            <div class="carousel-slide">
+                                <img src="images/portefeuille-1.jpg" id="last" width="690" height="400" alt="">
+                                <img src="images/chapeau-1.jpg" width="690" height="400" alt="">
+                                <img src="images/chaussure-3.png"  width="690" height="400" alt="">
+                                <img src="images/tabouret-1.jpg"  width="690" height="400" alt="">
+                                <img src="images/pagne-4.jpg"  width="690" height="400"  alt="">
+                                <img src="images/portefeuille-1.jpg"  width="690" height="400" alt="">
+                                <img src="images/chapeau-1.jpg" id="first" width="690" height="400" alt="">
+                            </div>
+                        </a>
+                        <div id="prevBtn"><img src="images/left-arrow.png" alt=""></div>
+                        <div id="nextBtn"><img src="images/right-arrow.png" alt=""></div>
+                    </div>
+                    <div class="shipping-info">
+                        <h2 class="text-orange">information sur l'expédition</h2>
+                        <p>
+                            Vous pouvez gérer vos articles Expédié par l'application en ligne grâce à des 
+                            outils qui vous permettent de suivre l’état de votre stock quasiment en temps réel.
+                            Après avoir identifié les produitsque vous souhaitez que l'application traite pour 
+                            vous, créez une expédition en suivant les instructions.
+                        </p>
+                    </div>
+                    <div class="best-selling">
+                        <h2 class="text-orange">Les meilleures Ventes</h2>
+                        <div class="produits">
+                            <div class="produit">
+                                <a href="#" style="display: block;">
+                                    <div class="produit-image">
+                                        <img src="images/chapeau-1.jpg" width="150" height="150" alt="">
+                                    </div>
+                                </a>
+                                <div class="produit-nom">
+                                    <h3 class="text-orange">Chapeau artisanal</h3>
+                                    <p class="price">
+                                        <strong>10 000 FCFA</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="produit">
+                                <a href="#" style="display: block;">
+                                    <div class="produit-image">
+                                        <img src="images/chaussure-1.png" width="150" height="150" alt="">
+                                    </div>
+                                </a>
+                                <div class="produit-nom">
+                                    <h3 class="text-orange">Chaussure artisanale</h3>
+                                    <p class="price">
+                                        <strong>3 000 FCFA</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="produit">
+                                <a href="#" style="display: block;">
+                                    <div class="produit-image">
+                                        <img src="images/portefeuille-1.jpg" width="150" height="150" alt="">
+                                    </div>
+                                </a>
+                                <div class="produit-nom">
+                                    <h3 class="text-orange">porte-monnaie en cuir</h3>
+                                    <p class="price">
+                                        <strong>5 000 FCFA</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="produit">
+                                <a href="#" style="display: block;">
+                                    <div class="produit-image">
+                                        <img src="images/pagne-1.png" width="150" height="150" alt="">
+                                    </div>
+                                </a>
+                                <div class="produit-nom">
+                                    <h3 class="text-orange">Pagne baaoulé bleu</h3>
+                                    <p class="price">
+                                        <strong>15 000 FCFA</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="produit">
+                                <a href="#" style="display: block;">
+                                    <div class="produit-image">
+                                        <img src="images/tabouret-1.jpg" width="150" height="150" alt="">
+                                    </div>
+                                </a>
+                                <div class="produit-nom">
+                                    <h3 class="text-orange">Tabpuret royal</h3>
+                                    <p class="price">
+                                        <strong>150 000 FCFA</strong>
+                                    </p>
+                                </div>
+                                
+                            </div>
+                            <div class="produit">
+                                <a href="#" style="display: block;">
+                                    <div class="produit-image">
+                                        <img src="images/pagne-3.jpg" width="150" height="150" alt="">
+                                    </div>
+                                </a>
+                                <div class="produit-nom">
+                                    <h3 class="text-orange">Pagne Baoulé blanc</h3>
+                                    <p class="price">
+                                        <strong>15 000 FCFA</strong>
+                                    </p>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="compare">
+                        <h3 class="text-orange">Comparer des produits (2)</h3>
+                        <p>
+                            Pagne baoulé bleu <br>
+                            Pagne baoulé blanc
+                        </p>
+                        <p>
+                            <a href="#">Effacer tous</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button>Comparer</button>
+                        </p>
+                    </div>
+                    <div class="my-cart">
+                        <h3 class="text-orange">Mon Panier</h3>
+                        <p>
+                            il y a 1 article dans votre panier
+                        </p>
+                        <p>
+                            <a href="#">Effacer tous</a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button>Régler la note</button>
+                        </p>
+                    </div>
+                    <div class="youtube">
+                        <iframe width="250" height="200" src="https://www.youtube.com/embed/C3j0GjxXJmU" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                 allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="poll">
+                        <h3 class="text-orange">Votre Sondage</h3>
+                        <p>Comment trouvez-vous nos produits</p>
+                        <form action="">
+                            <label for=""><input type="checkbox" name="" id="">&nbsp;Super</label><br>
+                            <label for=""><input type="checkbox" name="" id="">&nbsp;Incroyable</label><br>
+                            <label for=""><input type="checkbox" name="" id="">&nbsp;Un succàs</label><br>
+                            <label for=""><input type="checkbox" name="" id="">&nbsp;Wow</label><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="details">
+                    <h3>S'inscrire à la newsletter</h3>
+                    <form action="">
+                        <input type="text" class="input" placeholder="Saissisez votre adrese e-mail"><br>
+                        <button>S'inscrire</button>
+                    </form>
+                    <h3>Restez Connecter</h3>
+                </div>
+                <div class="details">
+                    <h3>Informations</h3>
+                    <ul>
+                        <li><a href="#">Promotion</a></li>
+                        <li><a href="#">Nouveaux produits</a></li>
+                        <li><a href="#">Meilleurs ventes</a></li>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                        <li><a href="#">Qui sommes nous?</a></li>
+                        <li><a href="#">Paiement sécurisé</a></li>
+                    </ul>
+                </div>
+                <div class="details">
+                    <h3>Mon Compte</h3>
+                    <ul>
+                        <li><a href="#">Mes commandes</a></li>
+                        <li><a href="#">Mes avoirs</a></li>
+                        <li><a href="#">Mes adresses</a></li>
+                        <li><a href="#">Mes information personnelles</a></li>
+                        <li><a href="#">Mes bons de réduction</a></li>
+                    </ul>
+                </div>
+                <div class="details">
+                    <h3>Informations Sur Africanism</h3>
+                    <ul>
+                        <li>AFRICANISM, Abidjan Côte d'ivoire</li>
+                        <li>Appelez-nous au : +225 22 23 24 25 </li>
+                        <li>E-mail : yesso.linda@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright">
+            <div class="container">
+                <span>copyright &copy; 2020 - Linda Yesso</span>
+            </div>
+        </div>  
+        
+        <script>
+            /**
+            CAROUSEL START
+            */
+            var  carSlide = document.querySelector('.carousel-slide');
+            var  carImages = document.querySelectorAll('.carousel-slide img');
+
+            var prevBtn = document.querySelector('#prevBtn');
+            var nextBtn = document.querySelector('#nextBtn');
+
+            var counter = 1;
+            var size = carImages[0].clientWidth;
+
+            carSlide.style.transform = 'translateX('+(-size*counter) + 'px';
+
+            nextBtn.addEventListener('click',function(){
+                if (counter >= carImages.length - 1) return;
+                carSlide.style.transition = "transform 0.4s ease-in-out";
+                counter++;
+                carSlide.style.transform = 'translateX('+(-size*counter) + 'px';
+            });
+
+            prevBtn.addEventListener('click',function(){
+                if (counter <= 0) return;
+                carSlide.style.transition = "transform 0.4s ease-in-out";
+                counter--;
+                carSlide.style.transform = 'translateX('+(-size*counter) + 'px';
+            });
+
+            carSlide.addEventListener('transitionend',function(){
+                if (carImages[counter].id === 'last'){
+                    carSlide.style.transition = "none";
+                    counter = carImages.length - 2;
+                    carSlide.style.transform =  'translateX('+(-size*counter) + 'px';
+                }
+                if (carImages[counter].id === 'first'){
+                    carSlide.style.transition = "none";
+                    counter = carImages.length - counter;
+                    carSlide.style.transform =  'translateX('+(-size*counter) + 'px';
+                }
+            });
+
+            setInterval(function(){
+                if (counter >= carImages.length - 1) return;
+                carSlide.style.transition = "transform 0.4s ease-in-out";
+                counter++;
+                carSlide.style.transform = 'translateX('+(-size*counter) + 'px';
+            }, 3000);
+
+            /**
+            CAROUSEL END
+            */
+
+            function changeBackgroundColor(color){
+                var menu = document.querySelector(".menu");
+                var footer = document.querySelector("footer");
+                var compare = document.querySelector(".compare");
+                var myCart = document.querySelector(".my-cart ");
+                var poll = document.querySelector(".poll");
+
+                menu.style.backgroundColor = color;
+                footer.style.backgroundColor = color;
+                compare.style.backgroundColor = color;
+                myCart.style.backgroundColor = color;
+                poll.style.backgroundColor = color;
+            }
+        </script>
+    </body>
+</html>

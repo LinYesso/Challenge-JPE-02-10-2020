@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page 2 - Linda Yesso</title>
+        <meta charset="utf-8"/>
+        <style>
+            *{
+                margin:0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            .container{
+                width:1200px;
+                margin:0px auto;
+            }
+            .active{
+                display:inline-block;
+                background-color: orange;
+                text-align: center;
+                padding-left: 15px;
+            }
+            .shadow{
+                box-shadow: 2px 2px 2px black;
+            }
+            header .head{
+                height:150px;
+                background-color:  #fff;
+            }
+            .logo{
+                display: inline-block;
+            }
+            .connexion{
+                width:1045px;
+                display: inline-block;
+                vertical-align: top;
+                line-height: 150px;
+                text-align: right;
+            }
+            .bouton{
+                border:1px solid #eee;
+                padding:15px;
+                border-radius: 10px;
+                background-color: orangered;
+                color:white;
+                font-family: tahoma;
+                margin-left: 10px;
+            }
+            .connexion a{
+                text-decoration: none;
+                color:white;
+
+            }
+            header .menu{
+                height:70px;
+                background-color: #0f2538;
+                color:#fff;
+                line-height: 70px;
+            }
+            .menu a {
+                color:white;
+                text-decoration: none;
+                padding-right: 20px;
+            }
+            .menu form{
+                display: inline-block;
+                position:relative;
+            }
+            .menu form input{
+                border:none;
+                border-radius: 15px;
+                width:300px;
+                height:30px;
+                padding-left:10px;
+            }
+            .menu form button{
+                border:none;
+                border-radius: 50%;
+                width:30px;
+                height:30px;
+                background-color: orange;
+                color:white;
+                position: absolute;
+                right:0px;
+                top:20px;
+            }
+            main{
+                margin-top: 30px;
+            }
+            .left{
+                display: inline-block;
+                width:890px;
+                vertical-align: top;
+            }
+            .right{
+                display: inline-block;
+                width:300px;
+                vertical-align: top;
+            }
+            .product-image{
+                display: inline-block;
+                vertical-align: top;
+                width:49%;
+            }
+            .product-name{
+                display: inline-block;
+                vertical-align: top;
+                width:49%;
+            }
+            .product-details h2{
+                margin-bottom: 20px;
+            }
+            
+            .products-related{
+                margin-top: 30px;
+            }
+            .compare, .poll, .my-cart{
+                display: inline-block;
+                vertical-align: top;
+                width:32%;
+                height:200px;
+                padding-left: 10px;
+                background-color: #0f2538;
+                color:white;
+            }
+            .poll h3{
+                padding-top: 10px;
+            }
+            .poll p{
+                padding: 20px  0;
+            }
+            .poll label{
+                padding-top: 15px;
+            }
+            
+            .my-cart h3{
+                padding-top: 10px;
+                margin-bottom: 30px;
+            }
+            .my-cart p{
+                margin-bottom: 50px;
+            }
+            .compare h3{
+                padding-top: 10px;
+                margin-bottom:  30px;
+            }
+            .compare p{
+                margin-bottom: 30px;
+            }
+            .additional-info{
+                margin-top:30px;
+            }
+            .additional-info h2{
+                margin-bottom: 20px;
+            }
+            .right .small-images{
+                
+                height:100px;
+                border:1px solid black;
+                overflow-x: scroll;
+                margin-bottom: 40px;
+            }
+            .small-images > img{
+                display: inline-block;
+                cursor:pointer;
+            }
+            .similar-products{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .similar-product{
+                height:300px;
+                text-align: center;
+                padding-top: 30px;
+            }
+            .text-orange{
+                color: orange;
+            }
+
+            footer{
+                height:auto;
+                color:#fff;
+                margin-top:50px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                background-color: #0f2538;
+            }
+            footer .container{
+                display:flex;
+            }
+            footer .details{
+                flex:1;
+            }
+            footer h3{
+                margin-bottom: 30px;
+                color:orange;
+            }
+            footer ul{
+                list-style: none;
+            }
+            footer ul li{
+                padding:10px;
+            }
+            footer ul li a{
+                text-decoration:none;
+                color:white;
+            }
+            footer .input{
+                border: 1px solid #0f2538;
+                width:250px;
+                height: 30px;
+                padding:5px;
+            }
+            footer button{
+                border: 1px solid #0f2538;
+                width:250px;
+                height: 30px;
+                background-color: orange;
+                color:white;
+                margin-bottom:20px;
+            }
+            .copyright{
+                text-align: center;
+                background-color: #17202A;
+                color:#eee;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="head">
+                <div class="container">
+                    <div class="logo">
+                         <img src="images/logo_1.png" alt="">
+                    </div>
+                   
+                    <div class="connexion">
+                        <span class="bouton"><a href="#">Connexion</a> </span>
+                        <span class="bouton"><a href="#">Ma liste de souhaits</a></span>
+                        <span class="bouton"><a href="#">Mon Panier</a></span>
+                        <span class="bouton"><a href="#">Mon Compte</a> </span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="container">
+                    <a href="">Accueil</a>
+                    <a href="" class="active">Meubles</a>
+                    <a href="">Musiques</a>
+                    <a href="">Ebooks</a>
+                    <a href="">Electroniques</a>
+                    <a href="">Thèmes</a>
+                    <a href="">FAQ</a>
+                    <a href="">Contacts</a>
+                    <form action="">
+                        <input type="text" placeholder="Votre recherche ici">
+                        <button>Go</button>
+                    </form>
+                </div>
+            </div>    
+        </header>
+        <p class="container" style="padding-top: 10px;">
+            <a href="#">Acceuil</a> > <a href="#">Meubles</a> > Tabouret royal
+        </p>
+        <main>
+            <div class="container">
+                <div class="left">
+                    <div class="product">
+                        <div class="product-image">
+                            <img id="main-image" src="images/tabouret-1.jpg" width="400" height="400" alt="">
+                        </div>
+                        <div class="product-name">
+                            <p>
+                                <h1 class="text-orange">Tabouret Royal</h1>
+                                <a href="mailto:yesso.linda@gmail.com">Envoyer un mail à un ami</a> <br><br>
+                                <p>
+                                     <span><a href="#"><img src="images/star.PNG" height="20" alt="">3 vues</a></span> | <span><a href="#">Révoir cet article</a></span>
+                                </p><br>
+                                <p>
+                                    <span>Disponibilité : En stock</span>
+                                </p><br>
+                                <p>
+                                    <span>Prix normal : 150 000 FCFA</span>
+                                </p>
+                                <p>
+                                    <span>Prix spécial : 99 000 FCFA</span>
+                                </p><br>
+                                <p>
+                                    <span>Quantité : <input type="number" size="3" min="0" max="50"> <button class="shadow">Ajouter au panier</button></span> OR 
+                                    <span><a href="#">Ajouter au panier</a> <br><a href="#" style="padding-left: 250px;">Comparer</a></span>
+                                </p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h2 class="text-orange">Détails sur l'article</h2>
+                        <p>Le tabouret, chez les Akan, symbolise le culte des ancêtres, le roi, le royaume, l'état, la nation, 
+                            le pouvoir spirituel et temporel du souverain régnant. Les tabourets Akan possèdent 5 pieds (1 central et 4 autour) les petits 
+                            triangles qui bordent le tabouret symbolisent le rayonnement du soleil au zénith, les 4 pieds extérieurs les
+                            4 points cardinaux et l'assise arrondie un arc en ciel.Ces tabourets royaux étaient utilisés à des fins politiques ou commémoratives
+                             (réservés à des hauts dignitaires loyaux). Les sièges les plus prestigieux pouvaient être recouverts d'or : l'or, symbole de l'essence 
+                             du soleil et de la force vitale ou âme (kra), était associé à l'endurance (pérennité du soleil)
+                             et à la vie. Les ornements présents sur ces assises servaient à distinguer le rang hiérarchique,
+                              le sexe et la fonction du propriétaire du tabouret.
+                        </p>
+                    </div>
+                    <div class="products-related">
+                        <div class="compare">
+                            <h3 class="text-orange">Comparer des produits (2)</h3>
+                            <p>
+                                Pagne baoulé bleu <br>
+                                Pagne baoulé blanc
+                            </p>
+                            <p>
+                                <a href="#">Effacer tous</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button>Comparer</button>
+                            </p>
+                        </div>
+                        <div class="poll">
+                            <h3 class="text-orange">Votre Sondage</h3>
+                            <p>Comment trouvez-vous nos produits</p>
+                            <form action="">
+                                <label for=""><input type="checkbox" name="" id="">&nbsp;Super</label><br>
+                                <label for=""><input type="checkbox" name="" id="">&nbsp;Incroyable</label><br>
+                                <label for=""><input type="checkbox" name="" id="">&nbsp;Un succàs</label><br>
+                                <label for=""><input type="checkbox" name="" id="">&nbsp;Wow</label><br>
+                            </form>
+                        </div>
+                        <div class="my-cart">
+                            <h3 class="text-orange">Mon Panier</h3>
+                            <p>
+                                il y a 1 article dans votre panier
+                            </p>
+                            <p>
+                                <a href="#">Effacer tous</a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                <button>Régler la note</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="additional-info">
+                        <h2 class="text-orange">informations complémentaires</h2>
+                        <p>
+                            Le tabouret, chez les Akan, symbolise le culte des ancêtres, le roi, le royaume, l'état, la nation, 
+                            le pouvoir spirituel et temporel du souverain régnant. Les tabourets Akan possèdent 5 pieds (1 central et 4 autour) les petits 
+                            triangles qui bordent le tabouret symbolisent le rayonnement du soleil au zénith, les 4 pieds extérieurs les
+                            4 points cardinaux et l'assise arrondie un arc en ciel.Ces tabourets royaux étaient utilisés à des fins politiques ou commémoratives
+                             (réservés à des hauts dignitaires loyaux). Les sièges les plus prestigieux pouvaient être recouverts d'or : l'or, symbole de l'essence 
+                             du soleil et de la force vitale ou âme (kra), était associé à l'endurance (pérennité du soleil)
+                             et à la vie. Les ornements présents sur ces assises servaient à distinguer le rang hiérarchique,
+                              le sexe et la fonction du propriétaire du tabouret.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="right">
+                    <div class="small-images">
+                        <img src="images/tabouret-1.jpg" onClick="changeImage('images/tabouret-1.jpg')" width="90" height="95" alt="">
+                        <img src="images/tabouret-2.jpg" onClick="changeImage('images/tabouret-2.jpg')" width="90" height="95" alt="">
+                        <img src="images/tabouret-3.jpg" onClick="changeImage('images/tabouret-3.jpg')" width="90" height="95" alt="">
+                    </div>
+                    <p>Les articles qui pourraient vous interesser</p>
+                    <div class="similar-products">
+                        <div class="similar-product">
+                            <img src="images/pagne-5.jpg" width="125" height="125" alt=""><br>
+                            <p>
+                                <a href="#" class="text-orange">Pagne Baoulé</a>
+                            </p>
+                            <p>
+                                Prix : 15 000 FCFA <br> <br>
+                            </p>
+                            <p>
+                                <button class="shadow">Ajouter au panier</button>
+                            </p>
+                            <p>
+                                <a href="#">Ajouter aux souhaits</a> <br>
+                                <a href="#">Comparer</a>
+                            </p>
+                        </div>
+                        <div class="similar-product">
+                            <img src="images/chapeau-1.jpg" width="125" height="125" alt=""><br>
+                            <p>
+                                <a href="#" class="text-orange">Chapeau</a>
+                            </p>
+                            <p>
+                                Prix : 10 000 FCFA <br> <br>
+                            </p>
+                            <p>
+                                <button  class="shadow">Ajouter au panier</button>
+                            </p>
+                            <p>
+                                <a href="#">Ajouter aux souhaits</a> <br>
+                                <a href="#">Comparer</a>
+                            </p>
+                        </div>
+                        <div class="similar-product">
+                            <img src="images/chaussure-1.png" width="125" height="125" alt=""><br>
+                            <p>
+                                <a href="#" class="text-orange">Chaussure</a>
+                            </p>
+                            <p>
+                                Prix : 3 000 FCFA <br> <br>
+                            </p>
+                            <p>
+                                <button  class="shadow">Ajouter au panier</button>
+                            </p>
+                            <p>
+                                <a href="#">Ajouter aux souhaits</a> <br>
+                                <a href="#">Comparer</a>
+                            </p>
+                        </div>
+                        <div class="similar-product">
+                            <img src="images/portefeuille-3.jpg" width="125" height="125" alt=""><br>
+                            <p>
+                                <a href="#" class="text-orange">Porte-monnaie</a>
+                            </p>
+                            <p>
+                                Prix : 5 000 FCFA <br> <br>
+                            </p>
+                            <p>
+                                <button  class="shadow">Ajouter au panier</button>
+                            </p>
+                            <p>
+                                <a href="#">Ajouter aux souhaits</a> <br>
+                                <a href="#">Comparer</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="youtube">
+                        <iframe width="300" height="300" src="https://www.youtube.com/embed/C3j0GjxXJmU" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                 allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="details">
+                    <h3>S'inscrire à la newsletter</h3>
+                    <form action="">
+                        <input type="text" class="input" placeholder="Saissisez votre adrese e-mail"><br>
+                        <button>S'inscrire</button>
+                    </form>
+                    <h3>Restez Connecter</h3>
+                </div>
+                <div class="details">
+                    <h3>Informations</h3>
+                    <ul>
+                        <li><a href="#">Promotion</a></li>
+                        <li><a href="#">Nouveaux produits</a></li>
+                        <li><a href="#">Meilleurs ventes</a></li>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                        <li><a href="#">Qui sommes nous?</a></li>
+                        <li><a href="#">Paiement sécurisé</a></li>
+                    </ul>
+                </div>
+                <div class="details">
+                    <h3>Mon Compte</h3>
+                    <ul>
+                        <li><a href="#">Mes commandes</a></li>
+                        <li><a href="#">Mes avoirs</a></li>
+                        <li><a href="#">Mes adresses</a></li>
+                        <li><a href="#">Mes information personnelles</a></li>
+                        <li><a href="#">Mes bons de réduction</a></li>
+                    </ul>
+                </div>
+                <div class="details">
+                    <h3>Informations Sur Africanism</h3>
+                    <ul>
+                        <li>AFRICANISM, Abidjan Côte d'ivoire</li>
+                        <li>Appelez-nous au : +225 22 23 24 25 </li>
+                        <li>E-mail : yesso.linda@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright">
+            <div class="container">
+                <span>Copyright &copy; 2020 - Linda Yesso</span>
+            </div>
+        </div>  
+        
+        <script>
+            function changeImage(imageSrc){
+                var mainImage = document.querySelector("#main-image");
+                mainImage.src = imageSrc;
+            }
+        </script>
+    </body>
+</html>
